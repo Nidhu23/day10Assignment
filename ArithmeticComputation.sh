@@ -2,6 +2,7 @@
 
 read -p "ENTER 3 Numbers " a b c
 declare -A operations
+cnt=0
 operations[sum1]=$(($a+$b*$c))
 operations[sum2]=$(($a*$b+$c))
 operations[sum3]=$(($c+$a/$b))
@@ -10,3 +11,6 @@ for i in ${!operations[@]}
 do
         a[((cnt++))]=${operations[$i]}
 done
+echo ${operations[@]}
+c=$(printf "%d\n" ${a[@]} | sort -r -g )
+echo "Values sorted in descending order " ${c[@]}
