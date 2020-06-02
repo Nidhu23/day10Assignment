@@ -6,3 +6,7 @@ operations[sum1]=$(($a+$b*$c))
 operations[sum2]=$(($a*$b+$c))
 operations[sum3]=$(($c+$a/$b))
 operations[sum4]=$(($a%$b+$c))
+for i in ${!operations[@]}
+do
+        a[((cnt++))]=${operations[$i]}
+done
