@@ -3,3 +3,4 @@
 read -p "ENTER 3 Numbers " a b c
 $(($a+$b*$c))
 $(($a*$b+$c))
+$(($c+$a/$b))
