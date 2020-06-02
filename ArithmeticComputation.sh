@@ -14,3 +14,5 @@ done
 echo ${operations[@]}
 c=$(printf "%d\n" ${a[@]} | sort -r -g )
 echo "Values sorted in descending order " ${c[@]}
+b=$(printf "%d\n"  ${a[@]} | sort -n )
+echo "Values sorted in ascending order " ${b[@]}
